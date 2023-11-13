@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" th:object="${student}">
+    <div>
+        Name: <input type="text" th:field="*{name}">
+    </div>
+    <div>
+        Date of birth: <input type="date" th:field="*{dob}">
+    </div>
+    <div>
+        Gender:
+        <select th:field="*{gender}">
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" class="btn btn-warning" value="Add">
+    </div>
+</form>
+</body>
+</html>
